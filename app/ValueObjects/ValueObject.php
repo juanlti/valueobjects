@@ -49,6 +49,7 @@ abstract class ValueObject implements Arrayable
 
     public function __set(string $name, mixed $value):void
     {
+        //metodo magico, sirve
         throw new \Exception("Los ValueObjects son inmutables por lo tanto su valor se puede cambiar.");
     }
 
