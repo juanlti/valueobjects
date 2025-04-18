@@ -37,8 +37,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Customer::create([
-            'name' => 'John',
-            'lastname' => 'Smith Doe',
+            'name' => '                john',
+            'lastname' => '        smith Doe',
             'email' => 'john@smith.com',
             'phone' => '172453858',
             'address' => '123 Main St',
