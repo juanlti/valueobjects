@@ -15,8 +15,8 @@ class FullName extends Text{
     protected function __construct(string | Stringable $value){
          parent::__construct($value);
 
+         //modificamos el valor, pasando el primer caracteres despues del blanco a mayuscula
          $this->value=ucwords($value);
-         //primera en mayuscula
         $this->validate();
     }
 

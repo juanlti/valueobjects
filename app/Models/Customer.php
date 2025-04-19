@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Casts\Email;
 use App\Casts\Name;
 
+use App\Casts\Phone;
 use App\Casts\Url;
 use App\ValueObjects\Concretes\FullName;
 use Illuminate\Database\Eloquent\Casts\Attribute;
@@ -21,6 +22,7 @@ class Customer extends Model
         'lastname' => Name::class,
         'email' => Email::class,
         'website' => Url::class,
+        'phone' => Phone::class,
     ];
 
     public function fullname(): Attribute
