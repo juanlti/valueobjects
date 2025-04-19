@@ -9,11 +9,15 @@ use Stringable;
 class FullName extends Text{
 
 //$fullName =  \App\ValueObjects\Concretes\FullName::from('juancruz barrera Liberati')
+    /**
+     * @throws Exception
+     */
     protected function __construct(string | Stringable $value){
          parent::__construct($value);
 
          $this->value=ucwords($value);
          //primera en mayuscula
+        $this->validate();
     }
 
 
@@ -41,8 +45,6 @@ class FullName extends Text{
      */
     public function validate(): void
     {
-        parent::validate();
-
         if(count(explode(' ', $this->value))<3){
             throw new Exception('Debe tener un nombre y dos apellidos');
         }
