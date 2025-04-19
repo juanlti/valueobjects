@@ -25,7 +25,7 @@ class Number extends ValueObject
     }
 
 
-    protected function validate(int|float $value)
+    protected function validate(int|float $value):void
     {
         if (!is_numeric($value)) {
             throw new \InvalidArgumentException('El valor  debe ser numerico');
